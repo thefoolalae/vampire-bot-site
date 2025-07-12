@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vampire Bot</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: radial-gradient(circle at top left, #1a001a, #0d0d0d, #2c001e);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 16px;
+      padding: 40px;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(233, 30, 99, 0.4);
+      position: relative;
+    }
+
+    h1 {
+      color: #e91e63;
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+      position: relative;
+    }
+
+    h1::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 100%;
+      width: 20px;
+      height: 50px;
+      background: red;
+      animation: drip 2s infinite ease-in-out;
+      border-radius: 0 0 10px 10px;
+    }
+
+    @keyframes drip {
+      0% { height: 0; opacity: 0; }
+      50% { height: 30px; opacity: 0.7; }
+      100% { height: 0; opacity: 0; }
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background: #e91e63;
+      color: #fff;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s;
+      margin: 10px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: #ff2a75;
+      transform: scale(1.05);
+    }
+
+    .glow {
+      animation: pulse 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 10px #e91e63; }
+      50% { box-shadow: 0 0 25px #e91e63; }
+      100% { box-shadow: 0 0 10px #e91e63; }
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay hidden>
+    <source src="https://freesound.org/data/previews/645/645458_1648170-lq.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="container">
+    <h1 class="glow">🧛‍♂️ Vampire Bot</h1>
+    <p>زيد البوت لسيرفرك وخليه يعضّك! 💀✨</p>
+
+    <a href="https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&permissions=8&scope=bot" class="btn glow">🔗 زيد البوت</a>
+    <a href="https://discord.gg/xRAGz6jrVk" class="btn">🎉 دخول للسيرفر</a>
+  </div>
+</body>
+</html>
